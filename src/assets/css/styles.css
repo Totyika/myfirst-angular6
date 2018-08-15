@@ -1,0 +1,193 @@
+body, html {
+  height: 100%;
+}
+
+a {
+  cursor: pointer;
+}
+
+.wrapper {
+  position: relative;
+  padding-bottom: 57px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+.top-section {
+  position: relative;
+  height: 500px;
+}
+
+.top-inner {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+.top-inner h1 {
+  font-size: 60px;
+}
+
+.testimonials-section {
+  padding: 30px 0px 60px;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  margin-bottom: 40px;
+}
+
+.testimonials-section h3 {
+  font-size: 18px;
+  color: lightseagreen;
+}
+
+.testimonials-section p {
+  font-size: 14px;
+}
+
+.about-inner-section {
+  padding: 60px 0px 30px;
+}
+
+.about-inner-section p {
+  font-size: 16px;
+  line-height: 30px;
+  text-align: justify;
+}
+
+.top-inner p {
+  font-size: 24px;
+}
+
+.products-section {
+  padding: 60px 0px;
+}
+
+.cat-nav {
+  border: 1px solid #ddd;
+}
+
+.cat-nav li {
+  list-style: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.cat-nav li:last-child {
+  border-bottom: 0px;
+}
+
+.cat-nav ul {
+  padding: 0px;
+  margin: 0;
+}
+
+.cat-nav li a {
+  display: block;
+  text-align: center;
+  line-height: 60px;
+  color: #bbb;
+  font-size: 16px;
+}
+
+.cat-nav li a:hover {
+  text-decoration: none;
+  color: lightseagreen;
+}
+
+.cat-nav li.active a {
+  background: #000;
+  color:#fff;
+}
+
+.wrapper .btn {
+  padding:  0px 10px;
+  min-width: 140px;
+  height: 40px;
+  line-height: 40px;
+  letter-spacing: .5px;
+  font-size: 16px;
+}
+
+.wrapper .green-btn {
+  background: lightseagreen;
+  color: #fff;
+}
+
+.prod-item {
+  padding: 0px 10px 20px;
+  border:1px solid #ddd;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.prod-item figure {
+  position: relative;
+  height: 200px;
+}
+
+.prod-item figure span {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background: green;
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .5px;
+}
+
+.prod-item .promo-price-div {
+  margin: 10px 0px;
+  line-height: 16px;
+}
+
+.prod-item .promo-price-div span {
+  display: inline-block;
+  margin: 0px 0px;
+  vertical-align: bottom;
+}
+
+.prod-item .promo-price-div span.prod-normal-price {
+  margin-right: 10px;
+  font-size: 14px;
+  text-decoration: line-through;
+  color: #ddd;
+  line-height: 14px;
+}
+
+a:focus, a:active {
+  text-decoration: none !important;
+}
+
+.prod-item figure img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  transform: translate(-50%, -50%);
+}
+
+.prod-item h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0px;
+}
+
+.prod-item span {
+  display: block;
+  margin: 10px 0px;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+

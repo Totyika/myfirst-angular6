@@ -1,0 +1,18 @@
+<section class="top-section" [ngStyle]="{'background': 'url(assets/img/' + topContact.topImg + ') no-repeat center center'}">
+  <div class="container">
+    <div class="row text-center">
+      <div class="top-inner">
+        <h1>{{ topContact.title }}</h1>
+        <p> {{ topContact.description }} </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="container text-center">
+    <h2>{{ contactInfo.title }}</h2>
+    <p>{{ contactInfo.address }}</p>
+    <span>{{ contactInfo.telephone }}</span>
+  </div>
+</section>

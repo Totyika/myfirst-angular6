@@ -1,0 +1,18 @@
+<div class="col-md-3">
+  <div class="prod-item">
+    <figure>
+      <img [src]="product.categoryProducts.thumb" [alt]="product.categoryProducts.title" />
+      <span class="promo" *ngIf="product.categoryProducts.price != product.categoryProducts.promoPrice">Promo</span>
+    </figure>
+    <h3>{{ product.categoryProducts.name }}</h3>
+    <span appStockColor [stockStatus]="product.categoryProducts.stock" class="stock-status">{{ product.categoryProducts.stock }}</span>
+    <span *ngIf="product.categoryProducts.price === product.categoryProducts.promoPrice else promoPriceLocal" class="prod-price">{{ product.categoryProducts.price }} RON</span>
+    <ng-template #promoPriceLocal>
+      <div class="promo-price-div">
+        <span class="prod-normal-price">{{ product.categoryProducts.price }} RON</span>
+        <span class="prod-promo-price">{{ product.categoryProducts.promoPrice }} RON</span>
+      </div>
+    </ng-template>
+    <a [routerLink]="['/product', product.categoryProducts.slug]" class="btn green-btn">View product</a>
+  </div>
+</div>

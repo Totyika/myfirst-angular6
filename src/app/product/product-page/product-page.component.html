@@ -1,0 +1,48 @@
+<section class="product-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ol class="breadcrumb">
+          <li><a routerLink="">Home</a></li>
+          <li><a routerLink="/products">Products</a></li>
+          <li><a [routerLink]="['/products', singleProduct[0].categoryProducts.categorySlug]">{{ singleProduct[0].categoryProducts.category }}</a></li>
+          <li>{{ singleProduct[0].categoryProducts.name }}</li>
+        </ol>
+      </div>
+      <div class="product-content clearfix">
+        <div class="col-md-6">
+          <figure>
+            <img src="{{ singleProduct[0].categoryProducts.image }}" alt="{{ singleProduct[0].categoryProducts.name }}">
+            <span class="promo" *ngIf="singleProduct[0].categoryProducts.price != singleProduct[0].categoryProducts.promoPrice">Promo</span>
+          </figure>
+        </div>
+        <div class="col-md-6">
+          <h1>{{ singleProduct[0].categoryProducts.name }}</h1>
+          <span class="sku-number">{{ singleProduct[0].categoryProducts.sku }}</span>
+          <div class="product-description">
+            <p>
+              {{ singleProduct[0].categoryProducts.description }}
+            </p>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <span appStockColor [stockStatus]="singleProduct[0].categoryProducts.stock" class="stock-status">{{ singleProduct[0].categoryProducts.stock }}</span>
+            </div>
+            <div class="col-md-6">
+              <span class="product-price">{{ singleProduct[0].categoryProducts.price }} RON</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="featured-product-section">
+  <div class="container">
+    <h2>Featured products</h2>
+    <div class="row">
+      <app-product-item *ngFor="let fProd of featuredProducts" [product]="fProd"></app-product-item>
+    </div>
+  </div>
+</section>

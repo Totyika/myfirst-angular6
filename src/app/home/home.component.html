@@ -1,0 +1,56 @@
+<section class="top-section" [ngStyle]="{'background': 'url(assets/img/' + topSection.imgSrc + ') no-repeat center center'}">
+  <div class="container">
+    <div class="row text-center">
+      <div class="top-inner">
+        <h1>{{ topSection.text.headline }}</h1>
+        <p>{{ topSection.text.introText }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-section">
+  <div class="container">
+    <div class="row">
+      <div class="about-text">
+        <h2>{{ aboutHome.title }}</h2>
+        <h3>{{ aboutHome.subtitle }}</h3>
+        <p>{{ aboutHome.text }}</p>
+        <a routerLink="about-us" class="btn green-btn">About us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="category-section">
+  <div class="container">
+    <h2>Products categories</h2>
+    <p>Just a motto for category section</p>
+    <div class="row">
+      <div class="col-md-3 text-center" *ngFor="let cat of productsCategory">
+        <article>
+          <a [routerLink]="['/products', cat.categorySlug]">
+            <figure>
+              <img src="assets/img/{{ cat.categoryImg }}" alt="" />
+            </figure>
+            <h3> {{ cat.categoryTitle }} </h3>
+          </a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials-section">
+  <div class="container">
+    <h2>Testimonials section</h2>
+    <hr>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let testimonial of testimonials">
+        <h3>{{ testimonial.author }}</h3>
+        <p><i>{{ testimonial.text }}</i></p>
+      </div>
+    </div>
+    <hr>
+  </div>
+</section>

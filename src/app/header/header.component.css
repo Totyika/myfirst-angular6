@@ -1,0 +1,34 @@
+#header {
+  padding: 20px 0px;
+  background: #f8f8f8;
+}
+
+#header a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav {
+  float: right;
+}
+
+.nav li {
+  float: left;
+  margin-left: 25px;
+  list-style: none;
+}
+
+.nav li a {
+  display: block;
+  color: #000;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.nav li a:hover {
+  text-decoration: none;
+}
+
+.nav li.active a {
+  color: lightseagreen;
+}

@@ -1,0 +1,18 @@
+<section class="top-section" [ngStyle]="{'background': 'url(assets/img/' + prodBg + ') no-repeat center center'}"></section>
+<section class="products-section">
+  <div class="container">
+    <div class="row">
+      <aside class="col-md-3">
+        <nav class="cat-nav">
+          <ul>
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="../products">All</a></li>
+            <li routerLinkActive="active" *ngFor="let category of categories"><a [routerLink]="['/products', category.categorySlug]">{{ category.categoryTitle }}</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <div class="col-md-9">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</section>
